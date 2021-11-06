@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.rickandmorty.ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.rickandmorty.ui.Login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+
+
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="com.example.rickandmorty.ui.Save.SaveFragment"
+        android:label="fragment_save"
+        tools:layout="@layout/fragment_save" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.rickandmorty.ui.Search.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+
+    <action
+        android:id="@+id/toHomeScreen"
+        app:destination="@+id/homeFragment"/>
+
+    <action
+        android:id="@+id/toProfileScreen"
+        app:destination="@id/loginFragment"/>
+
+    <action
+        android:id="@+id/toSearchScreen"
+        app:destination="@id/searchFragment"/>
+
+    <action
+        android:id="@+id/toSaveScreen"
+        app:destination="@id/saveFragment"/>
+
+
+</navigation>
