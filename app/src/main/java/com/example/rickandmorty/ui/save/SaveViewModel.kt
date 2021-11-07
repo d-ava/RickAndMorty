@@ -1,4 +1,4 @@
-package com.example.rickandmorty.ui.Save
+package com.example.rickandmorty.ui.save
 
 import androidx.lifecycle.ViewModel
 

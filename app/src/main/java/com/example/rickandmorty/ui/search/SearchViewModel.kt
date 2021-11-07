@@ -1,4 +1,4 @@
-package com.example.rickandmorty.ui.Search
+package com.example.rickandmorty.ui.search
 
 import androidx.lifecycle.ViewModel
 

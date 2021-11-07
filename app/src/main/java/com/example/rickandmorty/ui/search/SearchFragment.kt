@@ -1,12 +1,6 @@
-package com.example.rickandmorty.ui.Search
+package com.example.rickandmorty.ui.search
 
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import com.example.rickandmorty.BaseFragment
-import com.example.rickandmorty.R
 import com.example.rickandmorty.databinding.FragmentSearchBinding
 
 class SearchFragment : BaseFragment<FragmentSearchBinding, SearchViewModel>(FragmentSearchBinding::inflate) {

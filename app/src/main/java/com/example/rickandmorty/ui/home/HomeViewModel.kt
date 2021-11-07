@@ -1,25 +1,15 @@
-package com.example.rickandmorty.ui.Home
+package com.example.rickandmorty.ui.home
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.rickandmorty.Resource
-
-import com.example.rickandmorty.model.RickAndMorty
-import com.example.rickandmorty.network.NetworkClient
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Dispatchers.IO
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import retrofit2.Response
-import java.lang.Exception
+import androidx.paging.Pager
+import androidx.paging.PagingConfig
+import androidx.paging.cachedIn
+import com.example.rickandmorty.RickAndMortyPagingSource
 
 class HomeViewModel: ViewModel() {
 
-    private val _charactersLiveData = MutableLiveData<Response<RickAndMorty>>()
+/*    private val _charactersLiveData = MutableLiveData<Response<RickAndMorty>>()
     val charactersLiveData: LiveData<Response<RickAndMorty>> get() = _charactersLiveData
 
     fun loadCharactersLiveData(){
@@ -65,6 +55,12 @@ class HomeViewModel: ViewModel() {
             }
 
         }
-    }
+    }*/
+
+    fun loadCharactersFlow()=Pager(
+        config = PagingConfig(pageSize = 1),
+        pagingSourceFactory = {RickAndMortyPagingSource()}
+
+    ).flow.cachedIn(viewModelScope)
 
 }

@@ -1,4 +1,4 @@
-package com.example.rickandmorty.ui.Register
+package com.example.rickandmorty.ui.register
 
 import androidx.lifecycle.ViewModel
 

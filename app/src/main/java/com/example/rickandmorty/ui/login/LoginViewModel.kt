@@ -1,4 +1,4 @@
-package com.example.rickandmorty.ui.Login
+package com.example.rickandmorty.ui.login
 
 import androidx.lifecycle.ViewModel
 

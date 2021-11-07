@@ -5,32 +5,32 @@
     android:layout_margin="20dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.Login.LoginFragment">
+    tools:context=".ui.login.LoginFragment">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login Screen"
-        android:textSize="50sp" />
+
 
     <androidx.appcompat.widget.AppCompatEditText
         android:layout_marginTop="200dp"
         android:id="@+id/etUsername"
+        android:imeOptions="actionDone"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="enter username" />
+        android:hint="@string/enter_username" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="enter password" />
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:hint="@string/enter_password" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/tabInactive"
-        android:text="Log in"
+        android:text="@string/log_in"
         android:id="@+id/btnLogIn"/>
 
 
@@ -38,6 +38,8 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvRegister"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
