@@ -39,7 +39,7 @@ class HomeFragment :
     }
 
     private fun setRecycler2() {
-        binding.recycler.layoutManager = GridLayoutManager(context, 2)
+        binding.recycler.layoutManager = GridLayoutManager(context, 3)
         binding.recycler.adapter = characterPagingAdapter.withLoadStateFooter(
             footer = LoadingStateAdapter()
         )
